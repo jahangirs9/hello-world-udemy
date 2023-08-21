@@ -3,84 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Love Message</title>
+    <title>Registration Form</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            overflow: hidden;
-        }
-
-        .love-message {
-            position: relative;
-            width: 100%;
-            height: 100vh;
             background-color: #f4f4f4;
-        }
-
-        .bg-hearts {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-        }
-
-        .heart {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: pink;
-            transform: rotate(-45deg);
-            animation: heartsDance 5s infinite;
-        }
-
-        .message-container {
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .registration-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            color: #007bff;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
             width: 100%;
-            height: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
 
-        .zoom-text {
-            font-size: 24px;
-            color: pink;
-            animation: zoomInOut 3s alternate infinite;
+        .form-group input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
         }
 
-        @keyframes heartsDance {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        @keyframes zoomInOut {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1);
-            }
+        .form-group input[type="submit"]:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <div class="love-message">
-        <div class="bg-hearts">
-            <!-- Add heart shapes here -->
-            <div class="heart"></div>
-            <div class="heart" style="left: 40%; top: 20%;"></div>
-            <div class="heart" style="left: 60%; top: 50%;"></div>
-            <!-- Add more hearts as needed -->
-        </div>
-        <div class="message-container">
-            <p class="zoom-text">I love you Aqsa, you are very special to me</p>
-        </div>
+    <div class="registration-form">
+        <h2>Registration Form</h2>
+        <form>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Register">
+            </div>
+        </form>
     </div>
 </body>
 </html>
