@@ -11,7 +11,7 @@
             margin: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
+align-items: center;
             height: 100vh;
         }
 
@@ -77,4 +77,5 @@
     </div>
 </body>
 </html>
+
 
