@@ -3,79 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Jahangir Eye Glasses</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
             margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            padding: 0;
         }
 
-        .login-container {
-            background-color: #ffffff;
+        .header {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .glasses {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .glass-card {
+            width: 240px;
+            background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 300px;
-            text-align: center;
-        }
-
-        .login-container h1 {
             margin-bottom: 20px;
-            font-weight: bold; /* Added to make text bold */
-            color: #007bff; /* Added to add some light color */
-        }
-
-        .input-group {
-            margin-bottom: 15px;
-        }
-
-        .input-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .input-group input {
-            width: 100%;
             padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
         }
 
-        .input-group button {
+        .glass-image {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .glass-name {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .glass-price {
+            color: #007bff;
+            margin-top: 5px;
+        }
+
+        .footer {
             background-color: #007bff;
-            color: #ffffff;
-            border: none;
-            border-radius: 4px;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
-
-        .input-group button:hover {
-            background-color: #0056b3;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="login-container">
-        <h1>Welcome to Jahangir's Login Page</h1>
-        <form>
-            <div class="input-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
+    <div class="header">
+        <h1>Welcome to Jahangir Eye Glasses</h1>
+    </div>
+    <div class="container">
+        <div class="glasses">
+            <div class="glass-card">
+                <img class="glass-image" src="link-to-your-image" alt="Stylish Glasses">
+                <div class="glass-name">Stylish Glasses</div>
+                <div class="glass-price">Starting at $99</div>
             </div>
-            <div class="input-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <div class="input-group">
-                <button type="submit">Register</button> <!-- Changed button text to "Register" -->
-            </div>
-        </form>
+            <!-- Repeat the glass-card structure for other glasses -->
+        </div>
+    </div>
+    <div class="footer">
+        <p>Cheaper Prices, Premium Quality</p>
     </div>
 </body>
 </html>
