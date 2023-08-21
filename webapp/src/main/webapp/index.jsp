@@ -11,7 +11,7 @@
             margin: 0;
             display: flex;
             justify-content: center;
-align-items: center;
+            align-items: center;
             height: 100vh;
         }
 
@@ -26,6 +26,8 @@ align-items: center;
 
         .login-container h1 {
             margin-bottom: 20px;
+            font-weight: bold; /* Added to make text bold */
+            color: #007bff; /* Added to add some light color */
         }
 
         .input-group {
@@ -60,7 +62,7 @@ align-items: center;
 </head>
 <body>
     <div class="login-container">
-        <h1>Login</h1>
+        <h1>Welcome to Jahangir's Login Page</h1>
         <form>
             <div class="input-group">
                 <label for="username">Username:</label>
@@ -71,11 +73,10 @@ align-items: center;
                 <input type="password" id="password" name="password" required>
             </div>
             <div class="input-group">
-                <button type="submit">Login</button>
+                <button type="submit">Register</button> <!-- Changed button text to "Register" -->
             </div>
         </form>
     </div>
 </body>
 </html>
-
 
