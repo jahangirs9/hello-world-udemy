@@ -3,86 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hub - Popular Books</title>
+    <title>Love Message</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            overflow: hidden;
+        }
+
+        .love-message {
+            position: relative;
+            width: 100%;
+            height: 100vh;
             background-color: #f4f4f4;
         }
 
-        .header {
-            background-color: #007bff;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .book-card {
-            width: 300px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin: 20px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .book-image {
+        .bg-hearts {
+            position: absolute;
             width: 100%;
-            height: auto;
-            max-height: 240px;
-            border-radius: 8px;
+            height: 100%;
+            pointer-events: none;
         }
 
-        .book-title {
-            font-weight: bold;
-            margin-top: 10px;
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: pink;
+            transform: rotate(-45deg);
+            animation: heartsDance 5s infinite;
         }
 
-        .author {
-            color: #007bff;
-            margin-top: 5px;
+        .message-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
         }
 
-        .footer {
-OBOBOBOB            background-color: #007bff;
-            color: #fff;
-OB            text-align: center;
-OBOB            padding: 10px;
+        .zoom-text {
+            font-size: 24px;
+            color: pink;
+            animation: zoomInOut 3s alternate infinite;
         }
-OBOBOB    </style>
-OB</head>
-OB<body>
-    <div class="header">
-OBOBOBOB        <h1>Welcome to Hub</h1>
-OB    </div>
-OBOB    <div class="container">
-        <div class="book-card">
-OB            <img class="book-image" src="link-to-book-cover-1.jpg" alt="Book Cover">
-            <div class="book-title">Book Title</div>
-OB            <div class="author">Author Name</div>
-OBOBOB        </div>
-        <div class="book-card">
-OBOBOBOBOB            <img class="book-image" src="link-to-book-cover-2.jpg" alt="Book Cover">
-OBOBOB            <div class="book-title">Book Title</div>
-            <div class="author">Author Name</div>
-OBOBOB        </div>
-        <!-- Add more book cards as needed -->
+
+        @keyframes heartsDance {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes zoomInOut {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="love-message">
+        <div class="bg-hearts">
+            <!-- Add heart shapes here -->
+            <div class="heart"></div>
+            <div class="heart" style="left: 40%; top: 20%;"></div>
+            <div class="heart" style="left: 60%; top: 50%;"></div>
+            <!-- Add more hearts as needed -->
+        </div>
+        <div class="message-container">
+            <p class="zoom-text">I love you Aqsa, you are very special to me</p>
+        </div>
     </div>
-    <div class="footer">
-OB        <p>Discover Popular Books and Authors</p>
-    </div>
-OB</body>
+</body>
 </html>
 
